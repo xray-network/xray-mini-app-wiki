@@ -1,17 +1,17 @@
 import { defineConfig } from "vocs"
-import tailwindcss from "@tailwindcss/vite"
 import path from "path"
+import { menuConfig } from "./src/config/menu"
 
 export default defineConfig({
+  rootDir: "src",
   vite: {
-    plugins: [tailwindcss()],
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "docs"),
+        "@": path.resolve(__dirname, "src"),
       },
     },
   },
-  title: "XRAY/App Wiki",
+  title: "Wiki",
   theme: {
     variables: {
       color: {
@@ -102,14 +102,5 @@ export default defineConfig({
       },
     },
   },
-  sidebar: [
-    {
-      text: "Getting Started",
-      link: "/getting-started",
-    },
-    {
-      text: "Example",
-      link: "/example",
-    },
-  ],
+  sidebar: menuConfig,
 })

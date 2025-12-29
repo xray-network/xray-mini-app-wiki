@@ -1,0 +1,61 @@
+@import url("https://cdn.xray.app/fonts/satoshi.css");
+@import "tailwindcss";
+@import "./styles/tailwind.css";
+
+
+:root {
+  --vocs-color_text: var(--color-black);
+}
+
+html,
+body,
+.vocs_DocsLayout {
+  font-family: "Satoshi", sans-serif;
+  @apply bg-white;
+  @apply dark:bg-black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700 !important;
+}
+
+.vocs_DocsLayout_gutterTop {
+  @apply bg-white!;
+  @apply dark:bg-black!;
+}
+
+.vocs_DesktopTopNav_curtain {
+  @apply bg-none!;
+}
+
+.vocs_DocsLayout_gutterLeft {
+  @apply bg-white;
+  @apply dark:bg-black;
+}
+
+.vocs_Sidebar_footer {
+  @apply bg-transparent!;
+  @apply hidden;
+}
+
+.vocs_Sidebar_footerCurtain {
+  @apply bg-none!;
+}
+
+.vocs_Sidebar_logoWrapper {
+  @apply bg-white!;
+  @apply dark:bg-black!;
+}
+
+.vocs_NavLogo_title {
+  @apply text-2xl font-bold;
+}
+
+.vocs_DocsLayout_content {
+  @apply bg-transparent!;
+}
+
+.vocs_Content {
+  @apply bg-transparent!;
+}
