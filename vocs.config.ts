@@ -1,11 +1,13 @@
 import { defineConfig } from "vocs"
 import path from "path"
 import { menuConfig } from "./src/config/menu"
+import svgr from "vite-plugin-svgr"
 
 export default defineConfig({
   rootDir: "src",
   iconUrl: "/favicon.svg",
   vite: {
+    plugins: [svgr()],
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src"),

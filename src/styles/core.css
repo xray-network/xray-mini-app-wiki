@@ -28,7 +28,8 @@ h6 {
   @apply hidden!;
 }
 
-.vocs_MobileTopNav, .vocs_MobileTopNav_curtain {
+.vocs_MobileTopNav,
+.vocs_MobileTopNav_curtain {
   @apply bg-white!;
   @apply dark:bg-black!;
 }

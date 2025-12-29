@@ -1,0 +1,77 @@
+@import "@/styles/tailwind.css";
+
+/* .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(20);
+}
+
+.item {
+  flex: 0 0 calc(50% - rem(11));
+  border: 1px solid $border;
+  border-radius: rem(20);
+  position: relative;
+  padding: rem(20);
+
+  @media (max-width: $sm-max-width) {
+    flex: 0 0 100%;
+  }
+
+  &:hover {
+    border-color: $blue;
+  }
+
+  &Ext {
+    position: absolute;
+    top: 50%;
+    margin-top: rem(-12);
+    right: rem(30);
+    color: $dark;
+    font-size: rem(24);
+    transform: rotate(45deg);
+  }
+
+  &Title {
+    font-weight: 700;
+    font-size: rem(18);
+    color: $dark;
+    line-height: 1.3;
+
+    small {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: rem(12);
+      opacity: 0.6;
+    }
+  }
+
+  svg {
+    width: rem(40) !important;
+    height: rem(40) !important;
+    margin-right: rem(20);
+  }
+}
+
+// dark theme
+[data-theme="dark"] {
+  .item {
+    border-color: $dark-border;
+
+    &:hover {
+      border-color: $blue-light;
+    }
+
+    &Ext {
+      color: $white;
+    }
+
+    &Title {
+      color: $white;
+    }
+
+    svg {
+      filter: invert(1);
+    }
+  }
+} */

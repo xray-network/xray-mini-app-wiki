@@ -266,7 +266,7 @@ export const px2rem = px2remTransformer({
   precision: 2,
 })
 
-const Theme = ({ children, theme }: { children: React.ReactNode, theme: "light" | "dark" }) => {
+const Theme = ({ children, theme }: { children: React.ReactNode; theme: "light" | "dark" }) => {
   const [antdTheme, setAntdTheme] = useState<Partial<ThemeConfig>>(lightTheme)
 
   useEffect(() => {
@@ -288,9 +288,7 @@ const Theme = ({ children, theme }: { children: React.ReactNode, theme: "light" 
       <App>
         <EscapeAntd />
       </App>
-      <StyleProvider transformers={[px2rem]}>
-        {children}
-      </StyleProvider>
+      <StyleProvider transformers={[px2rem]}>{children}</StyleProvider>
     </ConfigProvider>
   )
 }

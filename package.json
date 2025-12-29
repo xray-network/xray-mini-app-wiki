@@ -23,17 +23,23 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "antd": "^6.1.3",
+    "chart.js": "^4.5.1",
+    "classnames": "^2.5.1",
+    "date-fns": "^4.1.0",
     "lodash": "^4.17.21",
     "prettier": "^3.7.4",
     "react": "latest",
+    "react-chartjs-2": "^5.3.1",
     "react-dom": "latest",
     "react-router-dom": "^7.11.0",
+    "vite-plugin-svgr": "^4.5.0",
     "vocs": "latest",
     "xray-mini-app-sdk-react": "^0.1.6"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.21",
     "@types/react": "latest",
+    "@types/react-copy-to-clipboard": "^5.0.7",
     "typescript": "latest"
   }
 }
