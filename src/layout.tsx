@@ -1,10 +1,13 @@
-import { useEffect, ReactNode } from "react"
+import { useEffect, useState, ReactNode } from "react"
 import { useLocation } from "react-router-dom"
 import { useMiniAppClientMessaging, type HostMessage } from "xray-mini-app-sdk-react"
+import AntdTheme from "@/styles/antdTheme"
 
 export default function Layout({ children }: { children: ReactNode }) {
   const location = useLocation()
   const route = location.pathname + location.search + location.hash
+
+  const [theme, setTheme] = useState<"light" | "dark">("light")
 
   if (typeof window !== "undefined") {
     const { sendMessage: sendMessageToXRAY, isConnected } = useMiniAppClientMessaging(handleXRAYMessage)
@@ -15,6 +18,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         document.documentElement.classList.remove("light", "dark")
         document.documentElement.classList.add(theme)
         localStorage.setItem("vocs.theme", theme)
+        setTheme(theme)
       }
     }
 
@@ -29,5 +33,5 @@ export default function Layout({ children }: { children: ReactNode }) {
     }, [route])
   }
 
-  return children
+  return <AntdTheme theme={theme}>{children}</AntdTheme>
 }

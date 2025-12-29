@@ -1,0 +1,82 @@
+:root {
+  --vocs-color_text: var(--color-gray-500);
+}
+
+:root.dark {
+  --vocs-color_text: var(--color-gray-300);
+}
+
+html,
+body,
+.vocs_DocsLayout {
+  font-family: "Satoshi", sans-serif;
+  @apply bg-white;
+  @apply dark:bg-black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700 !important;
+}
+
+.vocs_MobileTopNav_navigation {
+  @apply hidden!;
+}
+
+.vocs_MobileTopNav, .vocs_MobileTopNav_curtain {
+  @apply bg-white!;
+  @apply dark:bg-black!;
+}
+
+.vocs_DocsLayout_gutterTop {
+  @apply bg-white! w-full!;
+  @apply dark:bg-black!;
+}
+
+.vocs_DesktopTopNav_curtain {
+  @apply bg-none!;
+}
+
+.vocs_DocsLayout_gutterTopCurtain {
+  @apply w-full!;
+}
+
+.vocs_DocsLayout_gutterLeft {
+  @apply bg-white;
+  @apply dark:bg-black;
+}
+
+.vocs_Sidebar_footer {
+  @apply bg-transparent!;
+  @apply hidden;
+}
+
+.vocs_Sidebar_footerCurtain {
+  @apply bg-none!;
+}
+
+.vocs_Sidebar_logoWrapper {
+  @apply bg-white!;
+  @apply dark:bg-black!;
+}
+
+.vocs_NavLogo_title {
+  @apply text-2xl font-bold;
+}
+
+.vocs_DocsLayout_content {
+  @apply bg-transparent!;
+}
+
+.vocs_Content {
+  @apply bg-transparent!;
+}
+
+.vocs_SearchDialog_overlay {
+  @apply bg-[rgba(240,240,242,.8)] dark:bg-[rgba(19,19,24,.8)];
+}

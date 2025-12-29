@@ -21,7 +21,9 @@
     "format": "prettier --write \"./**/*.{ts,tsx,js,jsx,json,md,mdx,css,scss}\""
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "antd": "^6.1.3",
+    "lodash": "^4.17.21",
     "prettier": "^3.7.4",
     "react": "latest",
     "react-dom": "latest",
@@ -30,6 +32,7 @@
     "xray-mini-app-sdk-react": "^0.1.6"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.21",
     "@types/react": "latest",
     "typescript": "latest"
   }

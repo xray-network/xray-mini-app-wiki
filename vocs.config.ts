@@ -4,6 +4,7 @@ import { menuConfig } from "./src/config/menu"
 
 export default defineConfig({
   rootDir: "src",
+  iconUrl: "/favicon.svg",
   vite: {
     resolve: {
       alias: {

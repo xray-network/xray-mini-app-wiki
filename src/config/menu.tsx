@@ -13,6 +13,7 @@ export const menuConfig = [
       { text: "Latest Updates", link: "/latest-updates/", icon: "xi xi-code" },
       { text: "Github Updates", link: "/github-updates/", icon: "xi xi-code" },
       { text: "Social Media", link: "/social-media/", icon: "xi xi-share" },
+      { text: "Install App (PWA)", link: "/install-app-pwa/", icon: "xi xi-add_circled" },
     ],
   },
   {
@@ -22,7 +23,6 @@ export const menuConfig = [
       { text: "XRAY/Network", link: "/xray-network/", icon: "xi xi-bank" },
       { text: "XRAY/Foundation", link: "/xray-foundation/", icon: "xi xi-heart" },
       { text: "XRAY/App", link: "/xray-app/", icon: "xi xi-cursor" },
-      { text: "XRAY/Graph", link: "/xray-graph/", icon: "xi xi-code" },
       { text: "XRAY/Vault", link: "/xray-vault/", icon: "xi xi-document" },
       { text: "Mini Apps", link: "/mini-apps/", icon: "xi xi-category" },
     ],
@@ -31,16 +31,12 @@ export const menuConfig = [
     text: "Developers",
     collapsed: false,
     items: [
-      { text: "CardanoWeb3.js", link: "/dev/cardano-web3-js/", icon: "xi xi-code" },
+      { text: "XRAY/Builder", link: "/dev/xray-builder/", icon: "xi xi-code" },
       { text: "XRAY/Graph", link: "/dev/xray-graph/", icon: "xi xi-code" },
       { text: "XRAY/Vault", link: "/dev/xray-vault/", icon: "xi xi-code" },
-      { text: "Mini Apps", link: "/dev/mini-apps/", icon: "xi xi-code" },
+      { text: "Mini Apps SDK", link: "/dev/mini-apps-sdk/", icon: "xi xi-code" },
+      { text: "CardanoWeb3.js", link: "/dev/cardano-web3-js/", icon: "xi xi-code" },
     ],
-  },
-  {
-    text: "App Info",
-    collapsed: false,
-    items: [{ text: "Install App (PWA)", link: "/install-app-pwa/", icon: "xi xi-add_circled" }],
   },
   {
     text: "Legal",

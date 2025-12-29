@@ -1,5 +1,6 @@
 import Empty from "@/components/Empty"
 import { Button } from "antd"
+import { LinkIcon, PlayCircleIcon } from "@heroicons/react/24/outline"
 
 # CardanoWeb3.js
 
@@ -13,11 +14,13 @@ Building an SDK is always a compromise between functionality, ease of code under
 
 <a href="https://cardano-web3-js.org/" target="_blank" className="me-3 mb-3 d-inline-block">
   <Button type="primary" size="large">
-    <i className="xi xi-link me-2" /> Official Docs
+    <LinkIcon style={{ width: "1.25rem" }} strokeWidth={2.5} />
+    <span>Official Docs</span>
   </Button>
 </a>
 <a href="https://cardano-web3-js.org/playground/" target="_blank" className="me-3 mb-3 d-inline-block">
   <Button type="primary" size="large">
-    <i className="xi xi-link me-2" /> Playground
+    <PlayCircleIcon style={{ width: "1.25rem" }} strokeWidth={2.5} />
+    <span>Playground</span>
   </Button>
 </a>
