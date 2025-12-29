@@ -1,5 +1,0 @@
-@import "@/styles/tailwind.css";
-
-.ant-tabs-dropdown-menu {
-  @apply dark:!bg-gray-700;
-}

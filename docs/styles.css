@@ -1,0 +1,7 @@
+@import url("https://cdn.xray.app/fonts/satoshi.css");
+
+html,
+body,
+.vocs_DocsLayout {
+  font-family: "Satoshi", sans-serif;
+}
