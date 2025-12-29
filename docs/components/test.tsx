@@ -1,12 +1,12 @@
-import style from "./style.module.css";
+import style from "./style.module.css"
 
 const Test = () => {
   return (
     <div>
-      <div className="btn">1</div>
+      <div className="bg-blue-500">1</div>
       <div className={style.button}>2</div>
     </div>
-  );
-};
+  )
+}
 
-export default Test;
+export default Test

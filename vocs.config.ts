@@ -1,129 +1,100 @@
-import { defineConfig } from "vocs";
-import path from "path";
+import { defineConfig } from "vocs"
+import tailwindcss from "@tailwindcss/vite"
+import path from "path"
 
 export default defineConfig({
   vite: {
+    plugins: [tailwindcss()],
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "docs"),
       },
     },
   },
-  title: "Docs",
+  title: "XRAY/App Wiki",
   theme: {
     variables: {
       color: {
         white: { light: "#ffffff", dark: "#ffffff" },
         black: { light: "#000000", dark: "#000000" },
-
         background: { light: "#ffffff", dark: "#0e0e18" },
         background2: { light: "#f6f7f2", dark: "#1e2232" },
         background3: { light: "#f3f4f6", dark: "#1f2937" },
         background4: { light: "#eeefe7", dark: "#2f222c" },
         background5: { light: "#e5e7eb", dark: "#3a2b36" },
-
         backgroundAccent: { light: "#1940ed", dark: "#5e69ff" },
         backgroundAccentHover: { light: "#0f2fbf", dark: "#4c56e6" },
         backgroundAccentText: { light: "#ffffff", dark: "#ffffff" },
-
         backgroundBlueTint: { light: "#c3cdfa", dark: "#080b4a" },
         backgroundDark: { light: "#f6f7f2", dark: "#0e0e18" },
-
         backgroundGreenTint: { light: "#f0fcfa", dark: "#02421e" },
         backgroundGreenTint2: { light: "#bef7ec", dark: "#046635" },
-
         backgroundIrisTint: { light: "#c3cdfa", dark: "#141873" },
-
         backgroundRedTint: { light: "#f3f4f6", dark: "#1e2232" },
         backgroundRedTint2: { light: "#e5e7eb", dark: "#2f222c" },
-
         backgroundYellowTint: { light: "#f9fafb", dark: "#1f2937" },
-
         border: { light: "#e5e7eb", dark: "#374151" },
         border2: { light: "#d1d5db", dark: "#1f2937" },
-
         borderAccent: { light: "#1940ed", dark: "#5e69ff" },
         borderBlue: { light: "#8b9ef6", dark: "#363cbf" },
         borderGreen: { light: "#54ebc3", dark: "#0cab6b" },
         borderIris: { light: "#8b9ef6", dark: "#222899" },
         borderRed: { light: "#d1d5db", dark: "#374151" },
         borderYellow: { light: "#e5e7eb", dark: "#1f2937" },
-
         heading: { light: "#1e2232", dark: "#f9fafb" },
         shadow: { light: "#e5e7eb", dark: "#000000" },
-
         text: { light: "#55556d", dark: "#f3f4f6" },
         text2: { light: "#6e758d", dark: "#d1d5db" },
         text3: { light: "#9ca3af", dark: "#9ca3af" },
         text4: { light: "#d1d5db", dark: "#6e758d" },
-
         textAccent: { light: "#1940ed", dark: "#5e69ff" },
         textAccentHover: { light: "#0f2fbf", dark: "#4c56e6" },
-
         textBlue: { light: "#1940ed", dark: "#5e69ff" },
         textBlueHover: { light: "#0f2fbf", dark: "#4c56e6" },
-
         textGreen: { light: "#10cc8a", dark: "#15e4a3" },
         textGreenHover: { light: "#0cab6b", dark: "#54ebc3" },
-
         textIris: { light: "#3f5ff0", dark: "#8fa5ff" },
         textIrisHover: { light: "#1940ed", dark: "#bfd6ff" },
-
         textRed: { light: "#55556d", dark: "#f3f4f6" },
         textRedHover: { light: "#374151", dark: "#ffffff" },
-
         textYellow: { light: "#6e758d", dark: "#d1d5db" },
         textYellowHover: { light: "#55556d", dark: "#f3f4f6" },
-
         blockquoteBorder: { light: "#e5e7eb", dark: "#374151" },
         blockquoteText: { light: "#6e758d", dark: "#d1d5db" },
-
         codeBlockBackground: { light: "#f6f7f2", dark: "#1e2232" },
         codeCharacterHighlightBackground: { light: "#eeefe7", dark: "#2f222c" },
         codeHighlightBackground: { light: "#eeefe7", dark: "#2f222c" },
         codeHighlightBorder: { light: "#d1d5db", dark: "#374151" },
-
         codeInlineBackground: { light: "#f6f7f2", dark: "#1e2232" },
         codeInlineBorder: { light: "#e5e7eb", dark: "#374151" },
         codeInlineText: { light: "#2f222c", dark: "#f0f7ff" },
-
         codeTitleBackground: { light: "#eeefe7", dark: "#2f222c" },
-
         dangerBackground: { light: "#f3f4f6", dark: "#1e2232" },
         dangerBorder: { light: "#d1d5db", dark: "#374151" },
         dangerText: { light: "#55556d", dark: "#f3f4f6" },
         dangerTextHover: { light: "#374151", dark: "#ffffff" },
-
         hr: { light: "#e5e7eb", dark: "#374151" },
-
         infoBackground: { light: "#c3cdfa", dark: "#080b4a" },
         infoBorder: { light: "#8b9ef6", dark: "#222899" },
         infoText: { light: "#071657", dark: "#f0f7ff" },
         infoTextHover: { light: "#030923", dark: "#ffffff" },
-
         lineNumber: { light: "#9ca3af", dark: "#6e758d" },
-
         link: { light: "#1940ed", dark: "#5e69ff" },
         linkHover: { light: "#0f2fbf", dark: "#4c56e6" },
-
         noteBackground: { light: "#f0fcfa", dark: "#02421e" },
         noteBorder: { light: "#9df5e2", dark: "#0cab6b" },
         noteText: { light: "#046635", dark: "#bef7ec" },
-
         successBackground: { light: "#f0fcfa", dark: "#02421e" },
         successBorder: { light: "#54ebc3", dark: "#10cc8a" },
         successText: { light: "#07874d", dark: "#bef7ec" },
         successTextHover: { light: "#046635", dark: "#e6fcf9" },
-
         tableBorder: { light: "#e5e7eb", dark: "#374151" },
         tableHeaderBackground: { light: "#f6f7f2", dark: "#2f222c" },
         tableHeaderText: { light: "#1e2232", dark: "#f9fafb" },
-
         tipBackground: { light: "#c3cdfa", dark: "#141873" },
         tipBorder: { light: "#657ff3", dark: "#222899" },
         tipText: { light: "#071657", dark: "#f0f7ff" },
         tipTextHover: { light: "#030923", dark: "#ffffff" },
-
         warningBackground: { light: "#f9fafb", dark: "#1f2937" },
         warningBorder: { light: "#e5e7eb", dark: "#374151" },
         warningText: { light: "#55556d", dark: "#f3f4f6" },
@@ -141,4 +112,4 @@ export default defineConfig({
       link: "/example",
     },
   ],
-});
+})
