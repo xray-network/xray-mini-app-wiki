@@ -52,7 +52,7 @@ const columns: ColumnsType<StatsFunding> = [
 
 const Servers = ({ funding }: { funding?: StatsFunding[] }) => {
   return (
-    <div className="xray-table">
+    <div className="shared-table">
       <Table
         rowKey={(i) => i.id}
         dataSource={[...(funding || [])].reverse()}

@@ -6,7 +6,7 @@ import DevFund from "./DevFund"
 const StatsTokenDistribution = () => {
   return (
     <div>
-      <p>
+      <p className="mb-4">
         The XRAY token distribution is designed to ensure a fair and equitable allocation of tokens across various
         stakeholders. The distribution events include two stages and Dev Fund:
       </p>

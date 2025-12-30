@@ -1,0 +1,9 @@
+@import "@/styles/tailwind.css";
+
+.flex {
+  @apply flex;
+}
+
+.items-center {
+  @apply items-center;
+}

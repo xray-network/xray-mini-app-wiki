@@ -4,6 +4,7 @@ import Informers from "@/components/informers"
 import type { StatsXray, StatsDevFund } from "../../types"
 import type { ColumnsType } from "antd/es/table"
 import * as Utils from "@/utils"
+import style from "../style.module.css"
 
 const columns: ColumnsType<StatsDevFund> = [
   {
@@ -33,23 +34,14 @@ const columns: ColumnsType<StatsDevFund> = [
     title: "Description",
     key: "description",
     dataIndex: "description",
-    render: (record, records) => <div className="text-wrap">{record}</div>,
+    render: (record, records) => <div>{record}</div>,
   },
   {
     title: "Tx",
     key: "tx_hash",
     dataIndex: "tx_hash",
     render: (record, records) => (
-      <div>
-        {record ? (
-          <Informers.Text
-            value={<span className="font-weight-normal text-muted">{Utils.truncate(record)}</span>}
-            copy={record}
-          />
-        ) : (
-          "—"
-        )}
-      </div>
+      <div>{record ? <Informers.Text value={<span>{Utils.truncate(record)}</span>} copy={record} /> : "—"}</div>
     ),
   },
 ]
@@ -83,52 +75,52 @@ const DevFund = () => {
 
   return (
     <div>
-      <p className="mb-4">
+      <p className={style.description}>
         The XRAY/Network Dev & Marketing Fund is a dedicated allocation of XRAY tokens reserved to support the ongoing
         development, maintenance, and growth of the XRAY ecosystem. This fund is used to incentivize developers,
         contribute to protocol upgrades, finance infrastructure improvements, and accelerate innovation across the
         platform.
       </p>
-      <div className="xray-container mb-4">
+      <div className="mb-4">
         {loading && (
           <div>
             <Skeleton active paragraph={{ rows: 2 }} title={false} />
           </div>
         )}
         {!loading && (
-          <div className="d-flex align-items-center flex-wrap me--5 mb-2">
-            <div className="me-5 mb-3 font-size-21">
+          <div className={style.informerContainer}>
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(allocated)} XRAY`}
                 title="Funds Allocated"
                 help="Total funds allocated for this stage"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(left)} XRAY`}
                 title="Funds Left"
                 help="Total funds left after distribution"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text value={`${leftPct}%`} title="Funds Left, %" help="Total funds left in percentage" />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(distributed)} XRAY`}
                 title="Funds Distributed"
                 help="Total funds distributed"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${distributedPct}%`}
                 title="Funds Distributed, %"
                 help="Total funds left in percentage"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(distributionsCount)}`}
                 title="Number of Distributions"
@@ -138,7 +130,7 @@ const DevFund = () => {
           </div>
         )}
       </div>
-      <div className="xray-table">
+      <div>
         <Table
           rowKey={(i) => i.id}
           dataSource={[...(devFundStats || [])].reverse()}

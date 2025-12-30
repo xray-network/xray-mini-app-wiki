@@ -31,7 +31,10 @@ const ChartStakeSchedule = () => {
     getStats()
   }, [])
 
-  const theme = "default"
+  let theme = "light"
+  if (typeof window !== "undefined") {
+    theme = localStorage.getItem("vocs.theme") ? "dark" : "light"
+  }
   const isLight = theme === "default"
 
   const colors = ["#647ee6", "#355aeb", "#647ee6", "#355aeb"]

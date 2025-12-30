@@ -7,7 +7,7 @@ import style from "./style.module.css"
 const StatsTokenMintParams = () => {
   return (
     <div>
-      <p>
+      <p className="mb-8">
         The XRAY token is designed with a set of parameters that define its utility, distribution, and governance
         capabilities. These parameters are crucial for maintaining the integrity and functionality of the XRAY/Network
         ecosystem.
@@ -42,7 +42,9 @@ const StatsTokenMintParams = () => {
               <div className={style.sectionTitle}>Policy ID</div>
               <div>
                 <Text
-                  value={<strong className={style.address}>86abe45be4d8fb2e8f28e8047d17d0ba5592f2a6c8c452fc88c2c143</strong>}
+                  value={
+                    <strong className={style.address}>86abe45be4d8fb2e8f28e8047d17d0ba5592f2a6c8c452fc88c2c143</strong>
+                  }
                   copy={"86abe45be4d8fb2e8f28e8047d17d0ba5592f2a6c8c452fc88c2c143"}
                 />
               </div>

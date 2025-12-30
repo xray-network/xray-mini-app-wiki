@@ -1,0 +1,13 @@
+@import "@/styles/tailwind.css";
+
+.size-5 {
+  @apply size-5;
+}
+
+.size-7 {
+  @apply size-7;
+}
+
+.size-10 {
+  @apply size-10;
+}

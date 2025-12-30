@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   if (typeof window !== "undefined") {
     const { sendMessage: sendMessageToXRAY, isConnected } = useMiniAppClientMessaging(handleXRAYMessage)
     const theme = localStorage.getItem("vocs.theme") === "dark" ? "dark" : "light"
-    
+
     useEffect(() => {
       setTheme(theme)
     }, [])

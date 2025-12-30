@@ -6,6 +6,7 @@ import * as Utils from "@/utils"
 import ChartIspoSchedule from "./ChartIspoSchedule"
 import ChartStakeSchedule from "./ChartStakeSchedule"
 import TableParticipants from "./TableParticipants"
+import style from "../style.module.css"
 
 const Stage1 = () => {
   const [xrayStats, setXrayStats] = useState<StatsXray>()
@@ -37,7 +38,7 @@ const Stage1 = () => {
 
   return (
     <div>
-      <p className="mb-4">
+      <p className={style.description}>
         This stage is designed to reward early adopters and XRAY token holders. ISPO participants receive a share of the
         XRAY token supply allocated for the 0% Fee ISPO, based on the amount of ADA they delegate to XRAY staking pools.
         An alternative way to earn rewards is through a snapshot-based distribution, which captures the state of the
@@ -52,60 +53,60 @@ const Stage1 = () => {
           </div>
         )}
         {!loading && (
-          <div className="d-flex align-items-center flex-wrap me--5 mb-2">
-            <div className="me-5 mb-3 font-size-21">
+          <div className={style.informerContainer}>
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(allocated)} XRAY`}
                 title="Funds Allocated"
                 help="Total funds allocated for this stage"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(left)} XRAY`}
                 title="Funds Left"
                 help="Total funds left after distribution"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text value={`${leftPct}%`} title="Funds Left, %" help="Total funds left in percentage" />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(distributed)} XRAY`}
                 title="Funds Distributed"
                 help="Total funds distributed"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${distributedPct}%`}
                 title="Funds Distributed, %"
                 help="Total funds left in percentage"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(byUsers)} XRAY`}
                 title="Withdrawn by Users"
                 help="Total funds withdrawn by users"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(dropped)} XRAY`}
                 title="Dropped"
                 help="Total funds dropped"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(stage1Stats?.participants)}`}
                 title="Participants"
                 help="Total participants in this stage"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(stage1Stats?.max_tvl)} ADA`}
                 title="Max TVL"

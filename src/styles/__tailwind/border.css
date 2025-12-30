@@ -1,0 +1,15 @@
+@import "@/styles/tailwind.css";
+
+.border-b {
+  @apply border-b;
+}
+
+.border-gray-200 {
+  @apply border-gray-200;
+}
+
+html.dark {
+  .dark-border-gray-800 {
+    @apply border-gray-800;
+  }
+}

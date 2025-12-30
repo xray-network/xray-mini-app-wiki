@@ -1,7 +1,7 @@
 @import "@/styles/tailwind.css";
 
 .container {
-  @apply bg-gray-100 p-8 pb-2 rounded-lg relative overflow-hidden; 
+  @apply bg-gray-100 p-8 pb-2 rounded-2xl relative overflow-hidden;
 }
 
 .section {
@@ -72,90 +72,20 @@
   @apply flex-[0_1_10%] bg-orange-500;
 }
 
-/* .section {
-  margin-bottom: rem(20);
-
-  &Title {
-    color: $dark;
-    font-size: rem(18);
-    display: flex;
-    align-items: center;
-    margin-bottom: rem(10);
+:global(html.dark) {
+  .container {
+    @apply bg-gray-900;
   }
 
-  &Amount {
-    color: $dark;
-    font-size: rem(24);
-    font-weight: 700;
-    line-height: 1.3;
-  }
-}
-
-.icon {
-  height: rem(21);
-  width: rem(21);
-  display: block;
-  margin-right: rem(10);
-  border-radius: rem(8);
-
-  &Success {
-    background: $success;
+  .sectionTitle {
+    @apply text-white;
   }
 
-  &Danger {
-    background: $danger;
+  .sectionAmount {
+    @apply text-white;
   }
 
-  &Primary {
-    background: $primary;
-  }
-
-  &Orange {
-    background: $orange;
+  .sectionDescr {
+    @apply text-gray-500;
   }
 }
-
-.chart {
-  display: flex;
-  gap: rem(5);
-
-  > div {
-    border-radius: rem(10);
-    height: rem(60);
-    padding: rem(10) rem(12);
-    color: $white;
-  }
-
-  &One {
-    flex: 0 1 56.56%;
-    background: $success;
-  }
-
-  &Two {
-    flex: 0 1 15.44%;
-    background: $success;
-  }
-
-  &Three {
-    flex: 0 1 18%;
-    background: $primary;
-  }
-
-  &Four {
-    flex: 0 1 10%;
-    background: $orange;
-  }
-}
-
-// dark theme
-[data-theme="dark"] {
-  .section {
-    &Title {
-      color: $white;
-    }
-
-    &Amount {
-      color: $white;
-    }
-  }
-} */

@@ -1,11 +1,5 @@
 @import "@/styles/tailwind.css";
 
-/* .avatar {
-  height: rem(20);
-  width: rem(20);
-  border-radius: rem(100);
+.avatar {
+  @apply h-8 w-8 rounded-full;
 }
-
-// dark theme
-// [data-theme="dark"] {
-// } */

@@ -1,6 +1,8 @@
 import React, { ReactElement } from "react"
+import { Col, Row } from "antd"
 import { SVGX, SVGTelegram, SVGDiscord, SVGBluesky, SVGMedium, SVGYoutube, SVGGithub } from "@/components/svg"
 import style from "./style.module.css"
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline"
 
 const list: { icon: ReactElement; social: string; username: string; url: string }[] = [
   {
@@ -49,20 +51,22 @@ const list: { icon: ReactElement; social: string; username: string; url: string 
 
 const SocialMedia = () => {
   return (
-    <div className={style.container}>
+    <Row gutter={[24, 24]}>
       {list.map((item, index) => (
-        <a href={item.url} target="_blank" rel="noopener noreferrer" className={style.item} key={index}>
-          <i className={`xi xi-ext xi-arrow_up ${style.itemExt}`} />
-          <div className="d-flex align-items-center">
-            <span>{item.icon}</span>
-            <span className={style.itemTitle}>
-              <small>{item.username}</small>
-              <span>{item.social}</span>
-            </span>
-          </div>
-        </a>
+        <Col xs={24} sm={12} key={index}>
+          <a href={item.url} target="_blank" rel="noopener noreferrer" className={style.item}>
+            <div className="flex items-center">
+              <span className={style.itemIcon}>{item.icon}</span>
+              <span className={style.itemTitle}>
+                <small>{item.username}</small>
+                <span>{item.social}</span>
+              </span>
+            </div>
+            <ArrowUpRightIcon className={style.ext} strokeWidth={2} />
+          </a>
+        </Col>
       ))}
-    </div>
+    </Row>
   )
 }
 

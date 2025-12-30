@@ -1,0 +1,39 @@
+@import "@/styles/tailwind.css";
+
+.text-black {
+  @apply text-black;
+}
+
+.text-gray-500 {
+  @apply text-gray-500;
+}
+
+.text-green-500 {
+  @apply text-green-500;
+}
+
+.text-blue-500 {
+  @apply text-blue-500;
+}
+
+.text-sm {
+  @apply text-sm;
+}
+
+.text-lg {
+  @apply text-lg;
+}
+
+.text-xl {
+  @apply text-xl;
+}
+
+.text-2xl {
+  @apply text-2xl;
+}
+
+html.dark {
+  .dark-text-white {
+    @apply text-white;
+  }
+}

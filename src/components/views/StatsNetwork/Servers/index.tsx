@@ -50,7 +50,7 @@ const columns: ColumnsType<HealthStats[number]> = [
 
 const Servers = ({ healthStats }: { healthStats?: HealthStats }) => {
   return (
-    <div className="xray-table">
+    <div className="shared-table">
       <Table
         rowKey={(i) => i.host}
         dataSource={healthStats}

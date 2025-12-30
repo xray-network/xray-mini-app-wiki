@@ -23,3 +23,9 @@
 .copy {
   @apply text-gray-500 cursor-pointer;
 }
+
+:global(html.dark) {
+  .body {
+    @apply text-white;
+  }
+}

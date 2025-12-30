@@ -31,9 +31,12 @@ const ChartIspoSchedule = () => {
     getStats()
   }, [])
 
-  const theme = "default" // useAppSelector(AppSelectors.theme)
+  let theme = "light"
+  if (typeof window !== "undefined") {
+    theme = localStorage.getItem("vocs.theme") ? "dark" : "light"
+  }
   const distributed = history?.history || []
-  const isLight = theme === "default"
+  const isLight = theme === "light"
   const hoverColor = isLight ? "#000" : "#fff"
 
   const chartData = {

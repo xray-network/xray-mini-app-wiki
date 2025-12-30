@@ -2,6 +2,7 @@ import Informers from "@/components/informers"
 import type { StatsPrice, StatsXray, StatsXrayPool, CounterStats, StatsFunding, HealthStats } from "../../types"
 import * as Utils from "@/utils"
 import { Skeleton } from "antd"
+import style from "../style.module.css"
 
 const Metrics = ({
   price,
@@ -45,103 +46,103 @@ const Metrics = ({
         </div>
       )}
       {!loading && (
-        <div>
-          <p className="text-muted font-size-14">XRAY/Network Key Indicators</p>
-          <div className="d-flex align-items-center flex-wrap me--5 mb-2">
-            <div className="me-5 mb-3 font-size-21">
+        <div className={style.informerContainer}>
+          <p className={style.description}>XRAY/Network Key Indicators</p>
+          <div className={style.informerContainerInner}>
+            <div className={style.informer}>
               <Informers.Text value={`$${xrayPrice}`} title="XRAY Price" help="Current XRAY price" />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text value={`${xrayPriceADA} ADA`} title="XRAY Price" help="Current XRAY price" />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text value={`$${adaPrice}`} title="ADA Price" help="Current ADA price" />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`$${Utils.quantityWithCommas(marketCap)}`}
                 title="XRAY Market Cap"
                 help="The total market value of a cryptocurrency's circulating supply"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`$${Utils.quantityWithCommas(marketFdv)}`}
                 title="XRAY Fully-Diluted Value"
                 help="The market cap if the max supply was in circulation"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(maxSupply)} XRAY`}
                 title="Max Supply"
                 help="The maximum amount of tokens that will ever exist"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(circulatingSupply)} XRAY`}
                 title="Total Supply"
                 help="Total tokens unlocked and circulating"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${circulatingSupplyPercent}%`}
                 title="Total Supply, %"
                 help="Total tokens unlocked and circulating in percentage"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(xrayTransactions)}`}
                 title="XRAY Transactions"
                 help="Total transactions with XRAY tokens"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(xrayHolders)}`}
                 title="XRAY Holders"
                 help="Total wallets holding XRAY"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(apiCalls)}`}
                 title="XRAY/Graph API Calls"
                 help="Total XRAY/Graph API calls"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(nodesAdaDelegated)} ADA`}
                 title="Cardano Nodes Delegated"
                 help="Total ADA delegated to XRAY/Network's nodes"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(blocksProduced)}`}
                 title="Blocks Produced"
                 help="Total Cardano blocks produced by XRAY pools"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(nodesCount)}`}
                 title="Cardano Nodes"
                 help="Total block producing nodes"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(serversCount)}`}
                 title="Infrastructure Servers"
                 help="Total infrastructure servers"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(fundingSources)}`}
                 title="Funding Sources"

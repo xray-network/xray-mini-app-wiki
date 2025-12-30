@@ -105,7 +105,7 @@ const TableParticipants = () => {
           />
         </div>
       </div>
-      <div className="xray-table">
+      <div className="shared-table">
         <Table
           rowKey={(i) => i.k}
           dataSource={filteredDetails}

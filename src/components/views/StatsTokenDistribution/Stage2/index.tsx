@@ -4,6 +4,7 @@ import Informers from "@/components/informers"
 import type { StatsXray, StatsStage2 } from "../../types"
 import type { ColumnsType } from "antd/es/table"
 import * as Utils from "@/utils"
+import style from "../style.module.css"
 
 const columns: ColumnsType<StatsStage2> = [
   {
@@ -83,7 +84,7 @@ const Stage2 = () => {
 
   return (
     <div>
-      <p className="mb-4">
+      <p className={style.description}>
         This stage is designed to reward adopters and DApps that are actively using the XRAY token. The distribution is
         handled through a community-driven governance process, where holders can vote on proposals to allocate tokens to
         specific projects or initiatives. This ensures that the distribution is aligned with the needs and interests of
@@ -96,39 +97,39 @@ const Stage2 = () => {
           </div>
         )}
         {!loading && (
-          <div className="d-flex align-items-center flex-wrap me--5 mb-2">
-            <div className="me-5 mb-3 font-size-21">
+          <div className={style.informerContainer}>
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(allocated)} XRAY`}
                 title="Funds Allocated"
                 help="Total funds allocated for this stage"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(left)} XRAY`}
                 title="Funds Left"
                 help="Total funds left after distribution"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text value={`${leftPct}%`} title="Funds Left, %" help="Total funds left in percentage" />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(distributed)} XRAY`}
                 title="Funds Distributed"
                 help="Total funds distributed"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${distributedPct}%`}
                 title="Funds Distributed, %"
                 help="Total funds left in percentage"
               />
             </div>
-            <div className="me-5 mb-3 font-size-21">
+            <div className={style.informer}>
               <Informers.Text
                 value={`${Utils.quantityWithCommas(distributionsCount)}`}
                 title="Number of distributions"

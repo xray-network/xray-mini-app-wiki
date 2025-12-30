@@ -68,7 +68,7 @@ const Nodes = ({ xrayPools, price }: { xrayPools?: StatsXrayPool; price?: StatsP
   ]
 
   return (
-    <div className="xray-table">
+    <div className="shared-table">
       <Table
         rowKey={(i) => i.pool_id_bech32}
         dataSource={xrayPools?.pools}

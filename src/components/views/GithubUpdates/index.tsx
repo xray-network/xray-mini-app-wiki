@@ -75,7 +75,7 @@ const GithubUpdates = () => {
   }, [])
 
   return (
-    <div className="xray-table">
+    <div className="shared-table-with-pagination">
       <Table
         rowKey={(i) => Utils.randomString()}
         dataSource={githubStats}

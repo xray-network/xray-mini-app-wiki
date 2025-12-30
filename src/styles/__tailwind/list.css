@@ -1,0 +1,9 @@
+@import "@/styles/tailwind.css";
+
+.list-disc {
+  @apply list-disc;
+}
+
+.list-inside {
+  @apply list-inside;
+}

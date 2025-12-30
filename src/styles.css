@@ -4,3 +4,4 @@
 @import "./styles/core.css";
 @import "./styles/antd/style.css";
 @import "./styles/shared/style.css";
+@import "./styles/__tailwind/style.css";
