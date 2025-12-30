@@ -16,6 +16,7 @@
   "scripts": {
     "dev": "vocs dev --host --port 10005",
     "build": "vocs build",
+    "deploy": "yarn build && wrangler pages deploy",
     "preview": "vocs preview",
     "serve": "serve ./docs/dist",
     "format": "prettier --write \"./**/*.{ts,tsx,js,jsx,json,md,mdx,css,scss}\""
@@ -34,6 +35,7 @@
     "react-router-dom": "^7.11.0",
     "vite-plugin-svgr": "^4.5.0",
     "vocs": "latest",
+    "wrangler": "^4.54.0",
     "xray-mini-app-sdk-react": "^0.1.6"
   },
   "devDependencies": {
