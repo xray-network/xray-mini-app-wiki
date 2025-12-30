@@ -269,9 +269,12 @@ export const px2rem = px2remTransformer({
 const Theme = ({ children, theme }: { children: React.ReactNode; theme: "light" | "dark" }) => {
   const [antdTheme, setAntdTheme] = useState<Partial<ThemeConfig>>(lightTheme)
 
+  console.log(123, theme)
+
   useEffect(() => {
     const html = document?.querySelector("html")
     if (html) {
+      console.log(theme)
       const antdTheme = theme === "light" ? lightTheme : darkTheme
       setAntdTheme(antdTheme)
       html.setAttribute("data-disable-transitions", "true")
@@ -282,6 +285,8 @@ const Theme = ({ children, theme }: { children: React.ReactNode; theme: "light" 
       }, 500)
     }
   }, [theme])
+
+  console.log("antdTheme", antdTheme)
 
   return (
     <ConfigProvider theme={antdTheme}>

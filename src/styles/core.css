@@ -44,7 +44,10 @@ h6 {
 }
 
 .vocs_DocsLayout_gutterTopCurtain {
-  @apply w-full!;
+  @apply w-full! flex;
+  @media (min-width: 1080px) {
+    @apply hidden!;
+  }
 }
 
 .vocs_DocsLayout_gutterLeft {

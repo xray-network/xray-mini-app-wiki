@@ -1,5 +1,5 @@
 import Informers from "@/components/informers"
-import type { StatsPrice, StatsXray, StatsXrayPool, CounterStats, StatsFunding } from "../../types"
+import type { StatsPrice, StatsXray, StatsXrayPool, CounterStats, StatsFunding, HealthStats } from "../../types"
 import * as Utils from "@/utils"
 import { Skeleton } from "antd"
 
@@ -9,6 +9,7 @@ const Metrics = ({
   xrayPools,
   counterStats,
   funding,
+  healthStats,
   loading,
 }: {
   price?: StatsPrice
@@ -16,6 +17,7 @@ const Metrics = ({
   xrayPools?: StatsXrayPool
   counterStats?: CounterStats
   funding?: StatsFunding[]
+  healthStats?: HealthStats
   loading?: boolean
 }) => {
   const xrayPrice = Number(price?.["ray-network"]?.usd?.toFixed(6) || 0)
@@ -32,8 +34,7 @@ const Metrics = ({
   const nodesAdaDelegated = Number(xrayPools?.live_stake || 0)
   const blocksProduced = Number(xrayPools?.blocks_count || 0)
   const nodesCount = Number(xrayPools?.nodes_count || 0)
-  const serversCount = 0 // Number(graphStats?.output?.health?.status?.length || 0)
-  const catalystWins = Number(xrayStats?.catalyst_wins || 0)
+  const serversCount = Number(healthStats?.length || 0)
   const fundingSources = Number(funding?.length || 0)
 
   return (
@@ -138,13 +139,6 @@ const Metrics = ({
                 value={`${Utils.quantityWithCommas(serversCount)}`}
                 title="Infrastructure Servers"
                 help="Total infrastructure servers"
-              />
-            </div>
-            <div className="me-5 mb-3 font-size-21">
-              <Informers.Text
-                value={`${Utils.quantityWithCommas(catalystWins)}`}
-                title="Catalyst Wins"
-                help="Cardano's Project Catalyst funding received"
               />
             </div>
             <div className="me-5 mb-3 font-size-21">

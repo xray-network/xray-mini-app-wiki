@@ -1,14 +1,15 @@
+import { ReactElement } from "react"
 import style from "./style.module.css"
 
 const Empty = ({
   title = "The page is still under development",
   descr = "Our team is working tirelessly to make this page live!",
 }: {
-  title?: string | JSX.Element
-  descr?: string | JSX.Element
+  title?: string | ReactElement
+  descr?: string | ReactElement
 }) => {
   return (
-    <div className="text-center">
+    <div className={style.empty}>
       {title && (
         <div>
           <strong>{title}</strong>

@@ -60,6 +60,7 @@ const StatsNetwork = () => {
                 xrayStats={xrayStats}
                 xrayPools={xrayPools}
                 counterStats={counterStats}
+                healthStats={healthStats}
                 funding={funding}
                 loading={loading}
               />
